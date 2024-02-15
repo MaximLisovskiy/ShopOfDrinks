@@ -68,3 +68,36 @@ def Add_or_remove_drink():
 
 
 Add_or_remove_drink()
+
+def Change_price_drink():
+    if choose_Admin == 3:
+        drink_name_input = input(
+            "Введіть назву напою ціну якого хочете змінити: "
+        ).title()
+
+        # Заносимо в список напій який має одне слова
+        drink_name_parts = drink_name_input.split()
+        if len(drink_name_parts) == 1:
+            drink_name = drink_name_parts[0]
+            if drink_name in drinks:
+                new_price = int(input("Введіть нову ціну напою: "))
+                if new_price >= 0:
+                    drinks[drink_name] = new_price
+                else:
+                    print("Ціна не може бути менше 0 грн")
+        else:
+            print("Такого напою не існує")
+
+        if len(drink_name_parts) >= 2:
+            drink_name = "-".join(drink_name_parts)
+            if drink_name in drinks:
+                new_price = int(input("Введіть нову ціну напою: "))
+                if new_price >= 0:
+                    drinks[drink_name] = new_price
+                else:
+                    print("Ціна не може бути менше 0 грн")
+        else:
+            print("Такого напою не існує")
+
+
+Change_price_drink()
