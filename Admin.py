@@ -103,3 +103,21 @@ def Change_price_drink():
 Change_price_drink()
 
 dict_of_employees = {}
+
+
+def Add_and_assign_salary_or_remove_employee():
+    if choose_Admin == 4:
+        add_employee = input(
+            "Введіть посаду працівника для прийняття на роботу: "
+        ).title()
+        salary = int(input("Введіть заробітню плату для працівника: "))
+        dict_of_employees[add_employee] = salary
+    elif choose_Admin == 5:
+        remove_employee = input(
+            "Введіть посаду працівника для звільнення з роботи: "
+        ).title()
+        if remove_employee in dict_of_employees:
+            dict_of_employees.pop(remove_employee)
+
+
+Add_and_assign_salary_or_remove_employee()
