@@ -121,3 +121,14 @@ def Add_and_assign_salary_or_remove_employee():
 
 
 Add_and_assign_salary_or_remove_employee()
+
+def Change_salary_of_employee():
+    if choose_Admin == 6:
+        for employee in dict_of_employees:
+            if employee in dict_of_employees:
+                position = input("Введіть посаду для зміни заробітньої плати: ").title()
+                new_salary = int(input("Введіть нову заробітню плату: "))
+                dict_of_employees[position] = new_salary
+
+
+Change_salary_of_employee()
