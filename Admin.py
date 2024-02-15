@@ -101,3 +101,5 @@ def Change_price_drink():
 
 
 Change_price_drink()
+
+dict_of_employees = {}
