@@ -136,3 +136,13 @@ Change_salary_of_employee()
 def Show_employees():
     if choose_Admin == 7:
         print(dict_of_employees)
+
+
+Show_employees()
+
+def Show_drinks():
+    if choose_Admin == 8:
+        print(drinks)
+
+
+Show_drinks()
