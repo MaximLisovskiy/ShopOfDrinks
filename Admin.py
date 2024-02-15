@@ -42,3 +42,29 @@ def Function_of_admin():
 
 
 choose_Admin = Function_of_admin()
+
+def Add_or_remove_drink():
+    if choose_Admin == 1:
+        name = input("Введіть назву напою: ").title()
+        price = int(input("Введіть ціну напою: "))
+        if name not in drinks:
+            drinks[name] = price
+
+    if choose_Admin == 2:
+        drink = input("Введіть напій для видалення: ").title()
+        drink_name_parts = drink.split()
+        if len(drink_name_parts) == 1:
+            drink_name = drink_name_parts[0]
+            if drink_name in drinks:
+                drinks.pop(drink)
+            else:
+                print("Такого напою не існує")
+        elif len(drink_name_parts) >= 2:
+            drink_name = "-".join(drink_name_parts)
+            if drink_name in drinks:
+                drinks.pop(drink_name)
+            else:
+                print("Такого напою не існує")
+
+
+Add_or_remove_drink()
