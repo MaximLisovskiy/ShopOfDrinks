@@ -1,11 +1,9 @@
-def Choose_the_option():
-    option = int(
-        input("Вибери спеціальність: \n" "1. Адмін\n" "2. Менеджер\n" "3. Покупець\n")
-    )
+def choose_the_option():
+    option = int(input("Вибери спеціальність: \n" "1. Адмін\n"))
     return option
 
 
-option = Choose_the_option()
+option = choose_the_option()
 
 drinks = {
     "Лагер": 30,
@@ -19,7 +17,8 @@ drinks = {
     "Горілка-Вознесенська": 150,
 }
 
-def Function_of_admin():
+
+def function_of_admin():
     if option == 1:
         choose_Admin = int(
             input(
@@ -41,9 +40,10 @@ def Function_of_admin():
         return choose_Admin
 
 
-choose_Admin = Function_of_admin()
+choose_Admin = function_of_admin()
 
-def Add_or_remove_drink():
+
+def add_or_remove_drink():
     if choose_Admin == 1:
         name = input("Введіть назву напою: ").title()
         price = int(input("Введіть ціну напою: "))
@@ -67,9 +67,10 @@ def Add_or_remove_drink():
                 print("Такого напою не існує")
 
 
-Add_or_remove_drink()
+add_or_remove_drink()
 
-def Change_price_drink():
+
+def change_price_drink():
     if choose_Admin == 3:
         drink_name_input = input(
             "Введіть назву напою ціну якого хочете змінити: "
@@ -100,12 +101,12 @@ def Change_price_drink():
             print("Такого напою не існує")
 
 
-Change_price_drink()
+change_price_drink()
 
 dict_of_employees = {}
 
 
-def Add_and_assign_salary_or_remove_employee():
+def add_and_assign_salary_or_remove_employee():
     if choose_Admin == 4:
         add_employee = input(
             "Введіть посаду працівника для прийняття на роботу: "
@@ -120,9 +121,10 @@ def Add_and_assign_salary_or_remove_employee():
             dict_of_employees.pop(remove_employee)
 
 
-Add_and_assign_salary_or_remove_employee()
+add_and_assign_salary_or_remove_employee()
 
-def Change_salary_of_employee():
+
+def change_salary_of_employee():
     if choose_Admin == 6:
         for employee in dict_of_employees:
             if employee in dict_of_employees:
@@ -131,25 +133,30 @@ def Change_salary_of_employee():
                 dict_of_employees[position] = new_salary
 
 
-Change_salary_of_employee()
+change_salary_of_employee()
 
-def Show_employees():
+
+def show_employees():
     if choose_Admin == 7:
         print(dict_of_employees)
 
 
-Show_employees()
+show_employees()
 
-def Show_drinks():
+
+def show_drinks():
     if choose_Admin == 8:
         print(drinks)
 
 
-Show_drinks()
+show_drinks()
 
-def Order_drink():
+orders = []
+
+
+def order_drink():
     count = []
-    if choose_Buyer == 2 or choose_Admin == 10:
+    if choose_Admin == 10:
         drink_name = input("Введіть назву напою для замовлення: ").title()
         liters = float(input("Введіть літраж напою: "))
         number_of_phone = int(input("Введіть номер телефону: "))
@@ -172,4 +179,5 @@ def Order_drink():
         orders.append(order_info)
         print(f"До сплати {count[0]} грн")
 
-Order_drink()
+
+order_drink()
