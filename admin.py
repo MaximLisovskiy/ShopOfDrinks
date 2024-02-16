@@ -67,7 +67,7 @@ def remove_drink():
 
 
 def change_price_drink():
-    if choose_Admin == 3:
+    if function_of_admin() == 3:
         drink_name_input = input(
             "Введіть назву напою ціну якого хочете змінити: "
         ).title()
@@ -97,19 +97,20 @@ def change_price_drink():
             print("Такого напою не існує")
 
 
-change_price_drink()
 
 dict_of_employees = {}
 
 
-def add_and_assign_salary_or_remove_employee():
-    if choose_Admin == 4:
+def add_employee():
+    if function_of_admin() == 4:
         add_employee = input(
             "Введіть посаду працівника для прийняття на роботу: "
         ).title()
         salary = int(input("Введіть заробітню плату для працівника: "))
         dict_of_employees[add_employee] = salary
-    elif choose_Admin == 5:
+
+def remove_employee():
+    if function_of_admin() == 5:
         remove_employee = input(
             "Введіть посаду працівника для звільнення з роботи: "
         ).title()
@@ -117,11 +118,8 @@ def add_and_assign_salary_or_remove_employee():
             dict_of_employees.pop(remove_employee)
 
 
-add_and_assign_salary_or_remove_employee()
-
-
 def change_salary_of_employee():
-    if choose_Admin == 6:
+    if function_of_admin() == 6:
         for employee in dict_of_employees:
             if employee in dict_of_employees:
                 position = input("Введіть посаду для зміни заробітньої плати: ").title()
@@ -129,19 +127,14 @@ def change_salary_of_employee():
                 dict_of_employees[position] = new_salary
 
 
-change_salary_of_employee()
-
 
 def show_employees():
-    if choose_Admin == 7:
+    if function_of_admin() == 7:
         print(dict_of_employees)
 
 
-show_employees()
-
-
 def show_drinks():
-    if choose_Admin == 8:
+    if function_of_admin() == 8:
         print(drinks)
 
 
@@ -152,7 +145,7 @@ orders = []
 
 def order_drink():
     count = []
-    if choose_Admin == 10:
+    if function_of_admin() == 10:
         drink_name = input("Введіть назву напою для замовлення: ").title()
         liters = float(input("Введіть літраж напою: "))
         number_of_phone = int(input("Введіть номер телефону: "))
@@ -176,4 +169,3 @@ def order_drink():
         print(f"До сплати {count[0]} грн")
 
 
-order_drink()
