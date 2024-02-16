@@ -3,7 +3,6 @@ def choose_the_option():
     return option
 
 
-option = choose_the_option()
 
 drinks = {
     "Лагер": 30,
@@ -19,7 +18,7 @@ drinks = {
 
 
 def function_of_admin():
-    if option == 1:
+    if choose_the_option() == 1:
         choose_Admin = int(
             input(
                 "Опції Адміна:\n"
@@ -40,17 +39,16 @@ def function_of_admin():
         return choose_Admin
 
 
-choose_Admin = function_of_admin()
 
-
-def add_or_remove_drink():
-    if choose_Admin == 1:
+def add_drink():
+    if function_of_admin() == 1:
         name = input("Введіть назву напою: ").title()
         price = int(input("Введіть ціну напою: "))
         if name not in drinks:
             drinks[name] = price
 
-    if choose_Admin == 2:
+def remove_drink():
+    if function_of_admin() == 2:
         drink = input("Введіть напій для видалення: ").title()
         drink_name_parts = drink.split()
         if len(drink_name_parts) == 1:
@@ -66,8 +64,6 @@ def add_or_remove_drink():
             else:
                 print("Такого напою не існує")
 
-
-add_or_remove_drink()
 
 
 def change_price_drink():
