@@ -2,25 +2,18 @@
 def add_drink(drinks, name, price):
     drinks[name] = price
 
-# def remove_drink():
-#     if choose_Admin == 2:
-#         drink = input("Введіть напій для видалення: ").title()
-#         drink_name_parts = drink.split()
-#         if len(drink_name_parts) == 1:
-#             drink_name = drink_name_parts[0]
-#             if drink_name in drinks:
-#                 drinks.pop(drink)
-#             else:
-#                 print("Такого напою не існує")
-#         elif len(drink_name_parts) >= 2:
-#             drink_name = "-".join(drink_name_parts)
-#             if drink_name in drinks:
-#                 drinks.pop(drink_name)
-#             else:
-#                 print("Такого напою не існує")
-#
-#
-#
+def remove_drink(drinks, name):
+        drink_name_parts = name.split()
+        if len(drink_name_parts) == 1:
+            drink_name = drink_name_parts[0]
+            if drink_name in drinks:
+                drinks.pop(name)
+        elif len(drink_name_parts) >= 2:
+            drink_name = "-".join(drink_name_parts)
+            if drink_name in drinks:
+                drinks.pop(drink_name)
+
+
 # def change_price_drink():
 #     if choose_Admin == 3:
 #         drink_name_input = input(

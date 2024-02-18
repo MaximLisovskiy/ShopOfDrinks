@@ -9,4 +9,11 @@ def test_add_drink():
     assert name in drinks
     assert drinks[name] == price
 
+def test_remove_drink():
+    drinks = {}
+    name = "Lager"
+    price = 40
+    add_drink(drinks, name, price)
+    remove_drink(drinks, name)
 
+    assert name not in drinks
