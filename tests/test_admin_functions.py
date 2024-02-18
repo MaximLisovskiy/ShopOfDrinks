@@ -1,5 +1,6 @@
 from admin import *
 
+
 def test_add_drink():
     drinks = {}
     name = "Lager"
@@ -8,6 +9,7 @@ def test_add_drink():
 
     assert name in drinks
     assert drinks[name] == price
+
 
 def test_remove_drink():
     drinks = {}
@@ -18,6 +20,7 @@ def test_remove_drink():
 
     assert name not in drinks
 
+
 def test_change_price_drinks():
     drinks = {}
     name = "Lager"
@@ -27,3 +30,13 @@ def test_change_price_drinks():
     change_price_drink(drinks, name, new_price)
 
     assert drinks[name] == new_price
+
+
+def test_add_employee():
+    dict_employees = {}
+    employee = "Manager"
+    salary = 4500
+    add_employee(dict_employees, employee, salary)
+
+    assert employee in dict_employees
+    assert dict_employees[employee] == salary

@@ -17,17 +17,10 @@ def remove_drink(drinks, name):
 def change_price_drink(drinks, name, new_price):
         drinks[name] = new_price
 
-# dict_of_employees = {}
-#
-#
-# def add_employee():
-#     if choose_Admin == 4:
-#         add_employee = input(
-#             "Введіть посаду працівника для прийняття на роботу: "
-#         ).title()
-#         salary = int(input("Введіть заробітню плату для працівника: "))
-#         dict_of_employees[add_employee] = salary
-#
+
+def add_employee(dict_employees, employee, salary):
+    dict_employees[employee] = salary
+
 # def remove_employee():
 #     if choose_Admin == 5:
 #         remove_employee = input(
