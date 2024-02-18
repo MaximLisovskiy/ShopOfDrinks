@@ -40,3 +40,12 @@ def test_add_employee():
 
     assert employee in dict_employees
     assert dict_employees[employee] == salary
+
+def test_remove_employee():
+    dict_employees = {}
+    employee = "Manager"
+    salary = 4500
+    add_employee(dict_employees, employee, salary)
+    remove_employee(dict_employees, employee)
+
+    assert employee not in dict_employees

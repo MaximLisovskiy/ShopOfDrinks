@@ -21,15 +21,11 @@ def change_price_drink(drinks, name, new_price):
 def add_employee(dict_employees, employee, salary):
     dict_employees[employee] = salary
 
-# def remove_employee():
-#     if choose_Admin == 5:
-#         remove_employee = input(
-#             "Введіть посаду працівника для звільнення з роботи: "
-#         ).title()
-#         if remove_employee in dict_of_employees:
-#             dict_of_employees.pop(remove_employee)
-#
-#
+
+def remove_employee(dict_employees, employee):
+    dict_employees.pop(employee)
+
+
 # def change_salary_of_employee():
 #     if choose_Admin == 6:
 #         for employee in dict_of_employees:
