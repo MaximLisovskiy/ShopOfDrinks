@@ -28,14 +28,13 @@ def remove_employee(dict_employees, employee):
 
 def change_salary_of_employee(dict_employee, employee, new_salary):
     dict_employee[employee] = new_salary
-#
-#
-#
-# def show_employees():
-#     if choose_Admin == 7:
-#         print(dict_of_employees)
-#
-#
+
+
+
+def show_employees(dict_employees):
+    print(dict_employees)
+
+
 # def show_drinks():
 #     if choose_Admin == 8:
 #         print(drinks)
