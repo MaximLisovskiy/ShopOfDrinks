@@ -57,7 +57,3 @@ def order_drink():
     orders.append(order_info)
     print(f"До сплати {count[0]} грн")
 
-
-# def back():
-#     if choose_Admin == 11:
-#         function_of_admin()

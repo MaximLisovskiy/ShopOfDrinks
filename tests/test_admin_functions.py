@@ -80,3 +80,4 @@ def test_show_drinks():
     show_drinks(drinks)
 
     assert show_drinks(drinks) == print(drinks)
+
