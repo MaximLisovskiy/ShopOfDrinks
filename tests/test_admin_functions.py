@@ -49,3 +49,13 @@ def test_remove_employee():
     remove_employee(dict_employees, employee)
 
     assert employee not in dict_employees
+
+def test_change_salary_of_employee():
+    dict_employees = {}
+    employee = "Manager"
+    salary = 4500
+    new_salary = 5000
+    add_employee(dict_employees, employee, salary)
+    change_salary_of_employee(dict_employees, employee, new_salary)
+
+    assert dict_employees[employee] == new_salary

@@ -26,13 +26,8 @@ def remove_employee(dict_employees, employee):
     dict_employees.pop(employee)
 
 
-# def change_salary_of_employee():
-#     if choose_Admin == 6:
-#         for employee in dict_of_employees:
-#             if employee in dict_of_employees:
-#                 position = input("Введіть посаду для зміни заробітньої плати: ").title()
-#                 new_salary = int(input("Введіть нову заробітню плату: "))
-#                 dict_of_employees[position] = new_salary
+def change_salary_of_employee(dict_employee, employee, new_salary):
+    dict_employee[employee] = new_salary
 #
 #
 #
