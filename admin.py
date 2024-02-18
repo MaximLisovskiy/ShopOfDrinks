@@ -39,35 +39,25 @@ def show_drinks(drinks):
     print(drinks)
 
 
-# orders = []
-#
-#
-# def order_drink():
-#     count = []
-#     if choose_Admin == 10:
-#         drink_name = input("Введіть назву напою для замовлення: ").title()
-#         liters = float(input("Введіть літраж напою: "))
-#         number_of_phone = int(input("Введіть номер телефону: "))
-#         city = input("Введіть місто: ").title()
-#         surname_name_patronymic = input("Ваш ПІБ: ").title()
-#         post_office = int(input("Введіть відділення пошти: "))
-#
-#         for drink, price in drinks.items():
-#             if drink_name in drinks:
-#                 count.append(liters * price)
-#
-#         order_info = {
-#             "Напій": drink_name,
-#             "Літраж": liters,
-#             "Номер телефону": number_of_phone,
-#             "Місто": city,
-#             "ПІБ": surname_name_patronymic,
-#             "Відділення пошти": post_office,
-#         }
-#         orders.append(order_info)
-#         print(f"До сплати {count[0]} грн")
-#
-#
+
+def order_drink():
+
+    for drink, price in drinks.items():
+        if drink_name in drinks:
+            count.append(liters * price)
+
+    order_info = {
+        "Напій": drink_name,
+        "Літраж": liters,
+        "Номер телефону": number_of_phone,
+        "Місто": city,
+        "ПІБ": surname_name_patronymic,
+        "Відділення пошти": post_office,
+    }
+    orders.append(order_info)
+    print(f"До сплати {count[0]} грн")
+
+
 # def back():
 #     if choose_Admin == 11:
 #         function_of_admin()
