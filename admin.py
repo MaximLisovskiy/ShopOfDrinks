@@ -35,11 +35,10 @@ def show_employees(dict_employees):
     print(dict_employees)
 
 
-# def show_drinks():
-#     if choose_Admin == 8:
-#         print(drinks)
-#
-#
+def show_drinks(drinks):
+    print(drinks)
+
+
 # orders = []
 #
 #
