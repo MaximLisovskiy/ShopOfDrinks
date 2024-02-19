@@ -32,28 +32,13 @@ def change_salary_of_employee(dict_employee, employee, new_salary):
 
 
 def show_employees(dict_employees):
-    print(dict_employees)
+    return dict_employees
 
 
 def show_drinks(drinks):
-    print(drinks)
+    return drinks
 
 
 
 def order_drink():
-
-    for drink, price in drinks.items():
-        if drink_name in drinks:
-            count.append(liters * price)
-
-    order_info = {
-        "Напій": drink_name,
-        "Літраж": liters,
-        "Номер телефону": number_of_phone,
-        "Місто": city,
-        "ПІБ": surname_name_patronymic,
-        "Відділення пошти": post_office,
-    }
-    orders.append(order_info)
-    print(f"До сплати {count[0]} грн")
-
+    pass
