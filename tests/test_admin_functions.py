@@ -58,13 +58,11 @@ def test_change_salary_of_employee():
 
 def test_show_employee():
     dict_employees = {"Manager": 4500}
-    show_employees(dict_employees)
 
-    assert print(show_employees(dict_employees)) == print(dict_employees)
+    assert show_employees(dict_employees) == dict_employees
 
 def test_show_drinks():
     drinks = {"Лагер": 30, "Горілка-Хортиця": 180}
-    show_drinks(drinks)
 
-    assert print(show_drinks(drinks)) == print(drinks)
+    assert show_drinks(drinks) == drinks
 
