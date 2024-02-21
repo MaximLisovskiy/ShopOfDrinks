@@ -10,11 +10,15 @@ class Admin:
     def remove_drink(self, drinks: dict, title: str):
         if title in self.drinks:
             self.drinks.pop(title)
+        else:
+            return "Drink not found"
 
     def change_price_drink(self, drinks: dict, title: str, new_price: int):
         for title in self.drinks.keys():
             if title in drinks:
                 self.drinks[title] = new_price
+            else:
+                return "Drink not found"
 
     def add_employee(self, dict_employees: dict, employee: str, salary: int):
         self.dict_employees[employee] = salary
@@ -22,6 +26,8 @@ class Admin:
     def remove_employee(self, dict_employees: dict, employee: str):
         if employee in self.dict_employees:
             self.dict_employees.pop(employee)
+        else:
+            return "Employee not found"
 
     def change_salary_of_employee(
         self, dict_employee: dict, employee: str, new_salary: int
@@ -29,10 +35,11 @@ class Admin:
         for employee in self.dict_employees.keys():
             if employee in dict_employee:
                 self.dict_employees[employee] = new_salary
+            else:
+                return "Employee not found"
 
     def show_employees(self, dict_employees: dict):
         return self.dict_employees
 
     def show_drinks(self, drinks: dict):
         return self.drinks
-
