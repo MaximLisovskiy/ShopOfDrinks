@@ -11,7 +11,6 @@ def test_add_drink():
     assert drinks[title] == price
 
 
-
 def test_remove_drink():
     drinks = {"Лагер": 30, "Горілка-Хортиця": 180}
     title = "Горілка-Хортиця"
