@@ -6,7 +6,7 @@ class TestAdminFunction(unittest.TestCase):
 
 
     def test_add_drink(self):
-        admin = Admin()
+        admin = Admin("Maxim Lisovskiy")
         drinks = {"Лагер": 30, "Горілка-Хортиця": 180}
         title = "Obolon"
         price = 34
@@ -19,7 +19,7 @@ class TestAdminFunction(unittest.TestCase):
         assert type(price) == int
 
     def test_remove_drink(self):
-        admin = Admin()
+        admin = Admin("Maxim Lisovskiy")
         drinks = {"Лагер": 30, "Горілка-Хортиця": 180}
         title = "Горілка-Хортиця"
         admin.remove_drink(drinks, title)
@@ -30,7 +30,7 @@ class TestAdminFunction(unittest.TestCase):
 
 
     def test_change_price_drinks(self):
-        admin = Admin()
+        admin = Admin("Maxim Lisovskiy")
         drinks = {"Лагер": 30, "Горілка-Хортиця": 180}
         title = "Лагер"
         new_price = 50
@@ -43,7 +43,7 @@ class TestAdminFunction(unittest.TestCase):
         assert type(new_price) == int
 
     def test_add_employee(self):
-        admin = Admin()
+        admin = Admin("Maxim Lisovskiy")
         dict_employees = {}
         employee = "Manager"
         salary = 4500
@@ -57,7 +57,7 @@ class TestAdminFunction(unittest.TestCase):
 
 
     def test_remove_employee(self):
-        admin = Admin()
+        admin = Admin("Maxim Lisovskiy")
         dict_employees = {"Manager": 500}
         employee = "Manager"
         admin.remove_employee(dict_employees, employee)
@@ -68,7 +68,7 @@ class TestAdminFunction(unittest.TestCase):
 
 
     def test_change_salary_of_employee(self):
-        admin = Admin()
+        admin = Admin("Maxim Lisovskiy")
         dict_employees = {"Manager": 4500}
         employee = "Manager"
         new_salary = 5000
@@ -80,7 +80,7 @@ class TestAdminFunction(unittest.TestCase):
         assert type(new_salary) == int
 
     def test_show_employee(self):
-        admin = Admin()
+        admin = Admin("Maxim Lisovskiy")
         dict_employees = {"Manager": 4500}
 
         assert admin.show_employees(dict_employees) == dict_employees
@@ -88,7 +88,7 @@ class TestAdminFunction(unittest.TestCase):
 
 
     def test_show_drinks(self):
-        admin = Admin()
+        admin = Admin("Maxim Lisovskiy")
         drinks = {"Лагер": 30, "Горілка-Хортиця": 180}
 
         assert admin.show_drinks(drinks) == drinks
